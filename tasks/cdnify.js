@@ -1,6 +1,5 @@
 'use strict';
 
-var path = require('path');
 var googlecdn = require('google-cdn');
 var bowerConfig = require('bower').config;
 
@@ -11,12 +10,13 @@ module.exports = function (grunt) {
     // collect files
     var files = grunt.file.expand({ filter: 'isFile' }, this.data.html);
     var compJson = grunt.file.readJSON(bowerConfig.json);
+	var sep = '/';
 
     // Strip the leading path segment off, e.g. `app/bower_components` ->
     // `bower_components`
-    var bowerDirBits = bowerConfig.directory.split(path.sep);
+    var bowerDirBits = bowerConfig.directory.split(sep);
     bowerDirBits.shift();
-    var componentsPath = bowerDirBits.join(path.sep);
+    var componentsPath = bowerDirBits.join(sep);
 
     grunt.log
       .writeln('Going through ' + grunt.log.wordlist(files) + ' to update script refs');
