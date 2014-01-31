@@ -1,7 +1,8 @@
 {
   "name": "grunt-google-cdn",
   "version": "0.2.2",
-  "description": "Grunt task for replacing refs to resources on the Google CDN",
+  "description": "Grunt task for replacing refs to resources on the Google CDN (with fix for issue
+  #39)",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "grunt test"
@@ -18,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/btford/grunt-google-cdn"
+    "url": "git://github.com/angusdavisadobe/grunt-google-cdn"
   },
   "keywords": [
     "grunt",
